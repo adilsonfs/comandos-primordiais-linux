@@ -1,1 +1,148 @@
+#Diretório do root
+A primeira hierarquia do sistema de arquivos ou somente: / Hierarquia primária
 
+/bin/ Binários principais dos usuários.
+/boot/ Arquivos do sistema de Boot
+/dev/ Arquivos de dispositivos
+/etc/  Arquivos de configuração do sistema
+/home/ Diretório dos usuários comuns do sistema.
+/lib/ Diretório dos usuários comuns do sistema.
+/media/ Bibliotecas essenciais do sistema e os módulos do kernel.
+/mnt/ Diretório de montagem e dispositivos. Diretório de montagem de dispositivos - mesmo que "media".
+/opt/ Instalação de programas não oficiais da distribuição ou por conta do usuário.
+/sbin/ Armazena arquivos executáveis que representam comandos administrativos. Exemplo: shutdown
+/srv/ Diretório para dados de serviços fornecidos pelo sistema.
+/tmp/ Diretório para arquivos temporários.
+/usr/ Segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas.
+/var/ Diretório com arquivos variáveis gerados pelos programas do sistema. Exemplo: logs, spool de impressoras, e-mail e cache.
+/root/ Diretório do usuário root - O usuário root tem o total poder sobre o sistema. Podendo instalar, desinstalar e configurar.
+/proc/ Diretório virtual controlado pelo Kernel com configuração total do sistema.
+======================================================================================================================================
+
+1.2. Atalhos Globais;
+
+ Ctrl+C
+• Cancela o comando atual em funcionamento.
+
+Ctrl+Z
+• Pausa o comando atual, retorna com "fg" em primeiro plano Linux ou "bg" em segundo plano.
+
+Ctrl+D
+• Faz o logout da sessão atual (similar ao comando "exit").
+
+Ctrl+W
+• Apaga uma palavra na linha atual.
+
+Ctrl+U
+• Apaga a linha inteira.
+
+Ctrl+R
+• Tecle para Exiber um comando recente.
+
+!!
+• Repete o último comando.
+
+exit
+• Faz o logout da sessão atual.
+====================================================================================================================================
+
+2. Dicas úteis para o aprendizado
+
+1. Digite qualquer comando seguido de “–help” (Dois traços e a palavra help) para ver a uma descrição detalhada do comando.
+(EX: “wget –help”):
+
+2. Outra forma de conseguir documentação oficial dos comandos Linux é o comando man (manual), Digite man seguido do nome do comando que você precisa de informação.
+(EX: man wget)
+
+3. Se por algum motivo você preferir guardar as informações do man (Manual) de algum comando em um pendrive ou smartphone em PDF para estudos complementares utilize este comando (EX: man -t wget | ps2pdf – wget.pdf)
+============================================================================================================================================================================================================================
+
+3. Lista de comandos
+
+ ls
+Lista de diretórios.
+ls -al
+Lista de diretórios com exibição de arquivos ocultos.
+
+cd dir
+Muda do diretório atual para o especificado (substituir a variável dir pelo nome da pasta).
+cd
+Muda para o diretório /home (arquivos pessoais).
+
+Pwd
+Exibe o caminho do diretório atual.
+
+mkdir dir*
+Cria um diretório especificado (substituir a variável dir pelo nome da pasta).
+
+rm arq
+Apaga o arquivo especificado (substituir a variável arq pelo nome do arquivo que se quer excluir).
+
+rm -r dir
+Apaga o diretório especificado (substituir a variável dir pelo nome da pasta).
+
+rm -f arq
+Apaga o arquivo especificado forçadamente (-f de force) (substituir a variável arq pelo nome do arquivo que se quer excluir).
+
+rm -rf dir
+Apaga o diretório especificado forçadamente (substituir a variável dir pelo nome da pasta). Utilize esse comando com extrema atenção!
+
+cp -r arq1 arq2
+Copia o “arquivo1” para o “arquivo2” (substituir a variável arq pelo nome do arquivo).
+
+cp -r dir1 dir2
+Copia o “diretório1” para o “diretório2”; cria o “diretório2” caso não exista (substituir a variável dir pelo nome do diretório).
+
+mv arq1 arq2
+Dupla função: Pode ser usado para renomear ou mover o “arquivo1” para “arquivo2”. Se o arquivo2 for um diretório existente, move “arquivo1” para dentro do diretório “arquivo2” (substituir a variável arq pelo nome do arquivo).
+
+ln -s arq link
+Cria um link simbólico, link (atalho) para o arquivo (substituir a variável arq pelo nome do arquivo e link pelo nome que terá o atalho).
+
+touch arq
+Cria ou atualiza o arquivo (substituir a variável arq pelo nome do arquivo).
+
+cat > arq
+Direciona a entrada padrão para um arquivo (substituir a variável arq pelo nome do arquivo).
+
+more arq
+Exibe o conteúdo de um arquivo (substituir a variável arq pelo nome do arquivo).
+
+head arq
+Exibe as primeiras 10 linhas de um arquivo (substituir a variável arq pelo nome do arquivo).
+
+tail arq
+Exibe as últimas 10 linhas de um arquivo (substituir a variável arq pelo nome do arquivo).
+
+tail -f arq
+Exibe o conteúdo de um arquivo enquanto ele é atualizado (aumenta de tamanho), iniciando com as últimas 10 linhas (substituir a variável arq pelo nome do arquivo).
+
+ps
+Exibe os processos dos usuários ativos em tempo real. 
+
+top
+Exibe todos os processos rodando em tempo real.
+
+kill pid
+Mata um processo específico pelo número ID (substituir pid pelo número do processo).
+
+killall proc
+Mata todos os processos com o nome especificado proc, de processos (substituir proc pelo nome do processo).
+
+bg
+Lista trabalhos parados ou em segundo plano, ou pode continua-los também.
+
+fg
+Traz o trabalho mais recente para o primeiro plano.
+
+fg trab
+Traz o trabalho “trab” para o primeiro plano (substituir trab pelo nome do processo).
+
+chmod octal arq
+Muda as permissões do arquivo “arq” para octal, que pode ser especificada separadamente para “usuário”, “grupo” e “outros”. Os valores em octal são representados abaixo:
+• 4 – leitura (r, de read).
+• 2 – gravação (w, de write).
+• 1 – execução (x, de execute)
+Explanação: Para definir permissões, somam-se os valores acima. Por exemplo, para atribuir ao dono do arquivo (“usuário”) acesso total de leitura (r), gravação (w) e execução (x), basta somar o valor octal 4 + 2 + 1 = 7. Supondo que você queira limitar o acesso para membros do “grupo”, permitindo apenas a leitura e gravação, basta somar 4 + 2 = 6. Reunindo os dois exemplos citados, ficaria: chmod 760 (“r” para usuário, “w” para grupo e “0” para outros ou “rw-“).
+ 
+ 
