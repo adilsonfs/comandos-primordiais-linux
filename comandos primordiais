@@ -144,5 +144,134 @@ Muda as permissões do arquivo “arq” para octal, que pode ser especificada 
 • 2 – gravação (w, de write).
 • 1 – execução (x, de execute)
 Explanação: Para definir permissões, somam-se os valores acima. Por exemplo, para atribuir ao dono do arquivo (“usuário”) acesso total de leitura (r), gravação (w) e execução (x), basta somar o valor octal 4 + 2 + 1 = 7. Supondo que você queira limitar o acesso para membros do “grupo”, permitindo apenas a leitura e gravação, basta somar 4 + 2 = 6. Reunindo os dois exemplos citados, ficaria: chmod 760 (“r” para usuário, “w” para grupo e “0” para outros ou “rw-“).
+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Outros exemplos: 
+
+• chmod 777
+o leitura (r), gravação (w) e execução (x) para todos (“usuário”, “grupo” e “outros”).
+• chmod 755
+o “rwx” para o “dono” (usuário), “rw” para o “grupo” e “outros”.
+
+Para mais informações, digite no terminal: man chmod 
+
+ssh usuário@host
+Conecta ao host como usuário (exemplo: ssh gnulinuxbrasil@meuservidor).
+
+ssh -p porta usuário@host
+Conecta ao host na porta especificada (substituir “porta” pelo número da porta configurada).
+
+ssh-copy-id usuário@host
+Adiciona a sua chave para o host e usuário daquele host; serve para ativar logins sem senha com uso de chaves.
+
+grep sequência arquivos
+Pesquisa pela sequência nos arquivos (substituir a sequência e arquivos pelos valores correspondentes à pesquisa).
+
+grep -r sequência dir
+Pesquisa recursivamente pela sequência LinuxLinuxLinux no diretório dir
+
+comando | grep sequência
+Pesquisa pela sequência na saída do comando (substituir comando e sequência de acordo com os valores a serem buscados).
+
+locate arq
+Encontra todas as instâncias de um arquivo (substituir a variável arq pelo nome do arquivo). 
+
+date
+Exibe a data e hora atual.
+
+cal
+Exibe um calendário do mês atual.
+
+uptime
+Exibe o tempo de atividade do sistema.
+
+w
+Exibe quem está online.
+
+whoami
+Exibe como quem você está logado.
+
+finger
+Usuário Exibe informações do usuário.
+
+uname -a
+Exibe informações do kernel.
+
+cat /porc/cpuinfo
+Exibe informações da CPU.
  
- 
+
+ cat /proc/meminfo
+Exibe informações da memória.
+
+man comando
+Abre o manual do comando especificado (substituir a variável comando pelo nome do comando que se quer conhecer).
+
+df
+Exibe o uso do disco.
+du
+Exibe o uso do espaço em um diretório.
+
+free
+Exibe o uso da memória e swap.
+
+whereis aplicação
+Exibe possíveis localizações do aplicativo (substituir aplicação pelo nome do programa).
+
+which aplicação
+Exibe que a aplicação irá rodar por omissão (substituir aplicação pelo nome do programa).
+
+tar cf pacote.tar arqs
+Cria um pacote TAR (nomeado pacote.tar) com os arquivos especificados (substituir a variável arqs pelo nome do arquivo).
+
+tar xf pacote.tar
+Extrai os arquivos de “pacote.tar” (substituir a variável pacote.tar pelo nome do arquivo).
+
+tar czf pacote.tar.gz arqs
+Cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+
+tar xzf pacote.tar.gz
+Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.
+
+tar cjf pacote.tar.bz2
+Cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.
+
+tar xjf pacote.tar.bz2
+Extrai um pacote TAR (nomeado pacote.tar.gz) com compressão BZip2.
+
+gzip arq
+Compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).
+
+gzip -d arq.gz
+Descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo).
+
+ping host
+Envia um pacote ICMP (ping) para o host e Exibe o resultado (substituir a variável host pelo domínio de um site ou o número IP).
+
+whois domínio
+Retorna informações sobre o domínio (substituir a variável domínio pelo endereço de um site ou o número IP).
+
+dig host
+Retorna informações de DNS para o domínio (substituir a variável host pelo domínio de um site ou o número IP).
+                 
+
+ListAllCommands | grep searchstr
+Instalação a partir do código fonte; os comandos devem ser digitados na sequência em um terminal, um de cada vez.
+
+dig -x host
+Exibe o retorno reverso para um host (substituir a variável host pelo domínio de um site ou o número IP).
+
+wget arq
+Faz o download do arquivo “arq” (substituir a variável arq pelo endereço online do arquivo).
+
+wget -c arq
+Continua o download interrompido de um arquivo “arq” (substituir a variável arq pelo endereço online do arquivo).
+Comandos de instaladores
+• ./configure • make
+• make install
+
+dpkg -i pacote.deb
+Instala um pacote DEB (distros Debian) (substituir a variável pacote.deb pelo nome do pacote de programa).
+
+rpm -Uvh pacote.rpm
+Instala um pacote RPM (Distros que utilizam RPM) (substituir a variável pacote.rpm pelo nome do pacote de programa). 
