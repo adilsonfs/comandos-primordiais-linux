@@ -1,5 +1,5 @@
 Nome: Adilson Santos
 Linkedin: https://www.linkedin.com/in/adilson-santos-263070226/
 
-Achei esse guia com mais de 500 comandos do Linux (Explicados) muito bom. 
+Achei esse guia com mais de 500 comandos do Linux (Explicados em Portugues Brasil) eu recomendo.
 Estou documentando ele aqui no meu Github para aqueles que são iniciante como eu no Linux.
